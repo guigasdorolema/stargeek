@@ -1,0 +1,116 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+   height: 100px;
+   border-bottom: 1px solid grey;
+   background-image: url(img/download.jpg);
+   display: flex;
+   justify-content: space-between;
+   padding: 30px 50px;
+   box-shadow: grey 4px 6px 8px;
+   border-radius: 0 0 20px 20px;
+}
+
+.logo > img{
+    height: 70px;
+    margin: -10px
+}
+
+body{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form {
+    text-align: left;
+    display: inline-block;
+}
+
+form > div {
+    margin: 20px 0;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input + label {
+    display: inline;
+    margin: 0;
+}
+
+fieldset > input[type="radio"]:not(:first-of-type){
+    margin-left: 40px;
+}
+
+fieldset{
+    display: inline-block;
+    border-radius: 2px;
+    border: 1px solid grey;
+}
+
+input{
+    border-radius: 3px;
+    border: 1px solid gray;
+}
+
+input:focus{
+    background-color: rgb(222, 219, 213);
+    outline: 2px solid blue;
+}
+
+input:required{
+    background-color: rgb(221, 151, 151);
+}
+
+input:disabled{
+    border: 2px dotted black;
+}
+
+input[type="text"]:valid,
+input[type="email"]:valid,
+input[type="password"]:valid,
+input[type="url"]:valid {
+    background-image: url(img/correct.png);
+    background-repeat: no-repeat;
+    background-position: 95% 45%;
+    background-size: 16px;
+    background-color: rgb(225, 242, 236);
+}
+
+input[type="text"]:invalid,
+input[type="email"]:invalid,
+input[type="password"]:invalid,
+input[type="url"]:invalid {
+    background-image: url(img/warning.png);
+    background-repeat: no-repeat;
+    background-position: 95% 45%;
+    background-size: 16px;
+    background-color: rgb(232, 178, 170);
+}
+
+input[type="checkbox"]:checked + label {
+    font-weight: bold;
+}
+
+input[type="radio"]:checked + label {
+    font-weight: bold;
+}
+
+input[type="submit"]{
+    background-color: blue;
+    color: aliceblue;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
