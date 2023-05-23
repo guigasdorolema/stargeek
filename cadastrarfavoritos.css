@@ -105,3 +105,13 @@ header{
     font-size: 4rem;
     color: black;
 }
+.logo > a > img{
+    height: 70px;
+    margin: -10px
+}   
+body{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
