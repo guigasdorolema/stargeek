@@ -1,22 +1,47 @@
 const mensagem = document.querySelector(".mensagem");
-const email = document.getElementById("Email");
-const senha= document.getElementById("Senha");
-const nome= document.getElementById("Nome");
 const formulario = document.getElementById("formulario");
-alert("Cadastro Feito")
+const nome = document.getElementById("nome");
+const email = document.getElementById("email");
+const senha = document.getElementById("senha");
+
+var emaillogado;
+femaillogado();
 
 formulario.onsubmit = (evento) =>{
-    let dados = JSON.parse(localStorage.getItem("dados"));
+    if (nome.value ==""){
+        evento.preventDefault();
+        mensagem.innerHTML ="<p>Digite seu nome aqui! </p>";
+        nome.focus();
+        return null;
+    }
 
-    dados.forEach(element => {
-        if (MediaElementAudioSourceNode.email == email.value && MediaElementAudioSourceNode.senha == senha.value) {
-            evento.preventDefault();
-            mensagem.innerHTML="Logado";
-            return true;
-        } else{
-            evento.preventDefault();
-            mensagem.innerHTML ="Senha ou E-mail Incorreto";
-        }
-        
-    });
+    if (email.value == ""){
+        evento.preventDefault();
+        mensagem.innerHTML = "<p> Digite seu email </p>"
+        email.focus();
+        return null;
+    }
+
+    if (senha.value == ""){
+        evento.preventDefault();
+        mensagem.innerHTML = "<p> Digite sua senha </p>"
+        senha.focus();
+        return null;
+    }
+
+
+    let dados = JSON.parse(localStorage.getItem("dados")) || [];
+    dados.push({
+        nome : nome.value,
+        email : email.value,
+        senha : senha.value
+    })
+
+    localStorage.setItem("dados", JSON.stringify(dados));
+    evento.preventDefault();
+    mensagem.innerHTML="<p> Parabéns Cadastro feito com sucesso </p>";
+
+    setTimeout(()=>{
+         window.location.assign("login.html");
+    }, 3000);
 }

@@ -10,6 +10,9 @@ const botaoeditar = document.querySelector(".btneditar");
 const botaofechar = document.querySelector(".btnclose");
 const idelemento = document.getElementById("idalterar");
 
+var emaillogado;
+femaillogado();
+
 botaomodal.onclick = ()=>{
     cadmodal.style.display = "flex";
     botaoeditar.style.display = "none";
@@ -29,7 +32,8 @@ botaocadastrar.onclick = (evento)=>{
                                       {
                                          nome: nome.value,
                                         descricao: descricao.value,
-                                        foto: nomeArq
+                                        foto: nomeArq,
+                                        email: emaillogado
                                         }
                                      )
                         localStorage.setItem("catalogo", JSON.stringify(dados));
