@@ -144,3 +144,11 @@ async function fenvio() {
         return false;
       }
 }
+function femaillogado(){
+    let dados = JSON.parse(sessionStorage.getItem("logado"));
+    if (dados == null){
+        window.location("login.html");
+    } else{
+        emaillogado = dados[0].email;
+    }
+}
