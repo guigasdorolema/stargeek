@@ -4,8 +4,6 @@ const nome = document.getElementById("nome");
 const email = document.getElementById("email");
 const senha = document.getElementById("senha");
 
-var emaillogado;
-femaillogado();
 
 formulario.onsubmit = (evento) =>{
     if (nome.value ==""){
