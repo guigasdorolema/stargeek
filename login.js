@@ -13,7 +13,7 @@ formulario.onsubmit = (evento) =>{
     {
         mensagem.innerHTML= "aguarde..."
         evento.preventDefault();
-          let dados = JSON.parse(sessionStorage.getItem("logado")) ||
+          let dados = JSON.parse(sessionStorage.getItem("logado")) || []
             dados.push(
              {
                   email: email.value
@@ -22,7 +22,7 @@ formulario.onsubmit = (evento) =>{
             )
         sessionStorage.setItem("logado", JSON.stringify(dados));
         setTimeout(()=> {
-            window.location.assign("cadastro.html")
+            window.location.assign("cadastrarfavoritos.html")
         },3000)
         return true;
     }

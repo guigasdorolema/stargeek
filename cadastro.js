@@ -6,6 +6,7 @@ const senha = document.getElementById("senha");
 
 
 formulario.onsubmit = (evento) =>{
+    alert("e")
     if (nome.value ==""){
         evento.preventDefault();
         mensagem.innerHTML ="<p>Digite seu nome aqui! </p>";
