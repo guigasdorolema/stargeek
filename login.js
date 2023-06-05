@@ -22,7 +22,7 @@ formulario.onsubmit = (evento) =>{
             )
         sessionStorage.setItem("logado", JSON.stringify(dados));
         setTimeout(()=> {
-            window.location.assign("cadastrarfavoritos.html")
+            window.location.assign("paginainicial.html")
         },3000)
         return true;
     }
