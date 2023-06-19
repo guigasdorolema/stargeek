@@ -45,6 +45,7 @@ form{
 
 .card{
     width: 300px;
+    display: flex;
 }
 
 .cardimagem img{
