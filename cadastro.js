@@ -6,7 +6,7 @@ const senha = document.getElementById("senha");
 
 
 formulario.onsubmit = (evento) =>{
-    alert("e")
+    alert("Cadastro realizado, por favor aguarde")
     if (nome.value ==""){
         evento.preventDefault();
         mensagem.innerHTML ="<p>Digite seu nome aqui! </p>";
